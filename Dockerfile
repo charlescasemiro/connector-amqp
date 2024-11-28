@@ -8,4 +8,4 @@ RUN chmod 777 /app/root/
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
