@@ -1,5 +1,7 @@
 FROM tomcat:jre21-temurin-noble
 
+USER 10001
+
 WORKDIR /app/root
 
 COPY amqp-test/target/amqp-test.war /usr/local/tomcat/webapps/
