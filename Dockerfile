@@ -1,6 +1,5 @@
 FROM tomcat:jre21-temurin-noble
 
-USER 10001
 
 WORKDIR /app/root
 
@@ -9,6 +8,8 @@ COPY amqp-test/target/amqp-test.war /usr/local/tomcat/webapps/
 RUN chmod 777 /app/root/
 RUN mkdir -p /usr/local/tomcat/conf/Catalina/localhost
 RUN chmod -R a+rwx /usr/local/tomcat/conf/Catalina
+
+USER 10001
 
 EXPOSE 8080
 
